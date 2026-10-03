@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlcd-jev-firewall"
+version = "0.1.0"
+description = "Enterprise Compliance Firewall & Benchmark Harness using TypeSafe AI Jev System One (RLCD) Architecture"
+readme = "README.md"
+authors = [{ name = "TypeSafe AI Architecture Team", email = "dev@typesafe.ai" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "typesafe-sdk>=0.1.0; extra == 'live'",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
