@@ -64,7 +64,18 @@ def run_tests():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--benchmark":
+    if len(sys.argv) > 1 and sys.argv[1] == "--large-benchmark":
+        from rlcd_jev.benchmark import LargeScaleBenchmarkRunner
+        num_samples = int(sys.argv[2]) if len(sys.argv) > 2 else 2000
+        runner = LargeScaleBenchmarkRunner(num_samples=num_samples)
+        runner.run_benchmark()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--realworld-benchmark":
+        from rlcd_jev.benchmark import RealWorldBenchmarkRunner
+        model = sys.argv[2] if len(sys.argv) > 2 else "llama3.2:3b"
+        reps = int(sys.argv[3]) if len(sys.argv) > 3 else 3
+        runner = RealWorldBenchmarkRunner(ollama_model=model, repetitions=reps)
+        runner.run_full_benchmark()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--benchmark":
         runner = BenchmarkRunner()
         runner.run_benchmark()
     elif len(sys.argv) > 1 and sys.argv[1] == "--test":
