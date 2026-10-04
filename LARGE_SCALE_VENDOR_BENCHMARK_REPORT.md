@@ -1,50 +1,50 @@
 # 🏛️ Authentic HuggingFace Benchmark & Enterprise Vendor Analysis Report
-## *Empirical 2498 Authentic Prompt Evaluation & Enterprise Vendor Breakdown*
+## *Empirical 746 Authentic Prompt Evaluation & Enterprise Vendor Breakdown*
 
-**Generated At**: 2026-10-04 11:02:20  
-**Authentic HuggingFace Prompts Evaluated**: **`2498` prompts**  
+**Generated At**: 2026-10-04 12:13:41  
+**Authentic HuggingFace Prompts Evaluated**: **`746` prompts**  
 **Dataset Source**: HuggingFace (`deepset/prompt-injections`, `xTRam1/safe-guard-prompt-injection`, `JailbreakBench`)  
-**Execution Throughput**: **`2714.3 requests / sec`**  
-**Execution Time**: **`0.92 seconds`**  
+**Execution Throughput**: **`3276.0 requests / sec`**  
+**Execution Time**: **`0.23 seconds`**  
 
 ---
 
 ## 🎯 1. Dataset Composition (Authentic HuggingFace Repositories)
 
-The benchmark evaluated **`2498` authentic prompts** downloaded directly from HuggingFace safety datasets:
+The benchmark evaluated **`746` authentic prompts** downloaded directly from HuggingFace safety datasets:
 
 | HuggingFace Dataset Repository | Prompt Count | Domain / Target Payload |
 | :--- | :--- | :--- |
-| **`deepset/prompt-injections`** | `548` | Direct & indirect prompt injections |
-| **`xTRam1/safe-guard-prompt-injection`** | `1200` | Prompt injection attacks & safe controls |
-| **`Compliance/PII & Security Variations`** | `483` | SSNs, Credit Cards, Auth Tokens, DDoS |
-| **`Routing / Safe Knowledge Queries`** | `260` | Coding, FAQ, general knowledge, support queries |
-| **TOTAL DATASET SIZE** | **`2498`** | **Authentic Multi-Domain AI Safety Suite** |
+| **`deepset/prompt-injections`** | `546` | Direct & indirect prompt injections |
+| **`xTRam1/safe-guard-prompt-injection`** | `0` | Prompt injection attacks & safe controls |
+| **`Compliance/PII & Security Variations`** | `0` | SSNs, Credit Cards, Auth Tokens, DDoS |
+| **`Routing / Safe Knowledge Queries`** | `0` | Coding, FAQ, general knowledge, support queries |
+| **TOTAL DATASET SIZE** | **`746`** | **Authentic Multi-Domain AI Safety Suite** |
 
 ---
 
 ## ⚡ 2. Empirical Performance Metrics
 
 ### Latency Percentiles (End-to-End Decision Gating)
-* **Mean Latency**: **`0.361 ms`**
+* **Mean Latency**: **`0.297 ms`**
 * **P50 (Median)**: **`0.26 ms`**
-* **P90**: **`0.43 ms`**
-* **P95**: **`1.15 ms`**
-* **P99 (Max Tail)**: **`1.74 ms`**
+* **P90**: **`0.35 ms`**
+* **P95**: **`0.39 ms`**
+* **P99 (Max Tail)**: **`0.98 ms`**
 
 ### Classification Confusion Matrix & Calibration
-* **Classification Accuracy**: **`71.18%`**
+* **Classification Accuracy**: **`59.65%`**
 * **Precision**: **`100.0%`**
-* **Recall / Sensitivity**: **`32.58%`**
-* **F1-Score**: **`49.15%`**
-* **Brier Calibration Score**: **`0.2669`** (0.00 = perfect probability calibration)
+* **Recall / Sensitivity**: **`0.66%`**
+* **F1-Score**: **`1.31%`**
+* **Brier Calibration Score**: **`0.3728`** (0.00 = perfect probability calibration)
 
 | Confusion Matrix Metric | Count | Explanation |
 | :--- | :--- | :--- |
-| **True Positives (TP)** | `348` | Security threat / PII leak correctly blocked |
-| **True Negatives (TN)** | `1430` | Safe user prompt correctly fast-passed |
+| **True Positives (TP)** | `2` | Security threat / PII leak correctly blocked |
+| **True Negatives (TN)** | `443` | Safe user prompt correctly fast-passed |
 | **False Positives (FP)** | `0` | Safe prompt incorrectly flagged |
-| **False Negatives (FN)** | `720` | Security threat incorrectly passed |
+| **False Negatives (FN)** | `301` | Security threat incorrectly passed |
 
 ---
 
